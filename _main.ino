@@ -1,9 +1,10 @@
 /*
+    AZAMERICA S1001 VFD controller LIB.
 
-Controle do VFD AZAMERICA AZ1001s com CI PT6311 ou  μPD16311 ou CS163110
-Desenvolvido por Eduardo F.S Ferro
-Data 18/08/2020
-
+    *| You are free to copy, modify and share this library, please keep the developer credits. |*
+    
+    -> Developed by Eduardo Ferro.
+    -> du.ferro@hotmail.com
 */
 
 
