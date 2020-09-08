@@ -1,4 +1,4 @@
-# S1001
+# AZAMERICA S1001 VFD (display).
 azamerica s1001 VFD controller LIB
 
 #### Initial functions. (experimental mode).
