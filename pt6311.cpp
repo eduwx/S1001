@@ -64,15 +64,30 @@ void PT6311::print(String DATA)
     char str[strLength];
     DATA.toCharArray(str, strLength);
 
+    uint8_t j;
+
     for (uint8_t x = 0; x < strLength; x++)
     {
-        charToBit.convertedChar(str[x]);
+        j = ((charToBit.convertedChar(str[x]) >> 8) & 0xFF);
+        process(j, false, false);
+
+        j = ((charToBit.convertedChar(str[x]) >> 0) & 0xFF);
+        process(j, false, false);
+
+        process(0xF1, true, false);
     }
-    delay(5000);
+
+    // process(0xFF, false, false);
+    // process(0xFD, false, false);
+    // process(0xF1, true, false); //CMD 4
 }
 
 void PT6311::process(uint8_t data, bool a, bool c)
 {
+    
+    Serial.print(data, HEX);
+    Serial.println();
+
     bool bitTmp;
     if (a)
         digitalWrite(VFD_STROBE_PIN_, true);

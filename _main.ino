@@ -27,6 +27,8 @@
 // dataPin|clockPin|strobePin|Vfd initialize mode|Data setting|
 PT6311 vfd(7, 8, 9, VFD_INITIALIZE_MODE, VFD_DATA_SETTING, VFD_MEMORY_ADDRESS);
 
+uint16_t x = 36534;
+
 void setup()
 {
     Serial.begin(115200);
@@ -37,5 +39,8 @@ void loop()
 {
     vfd.setCursor(1);
     vfd.print("EduARdo FeRRo");
-    // delay(1000);
+    delay(1000);
 }
+
+// byte lowByte = ((p_value >> 0) & 0xFF);
+// return ((lowByte << 0) & 0xFF) + ((highByte << 8) & 0xFF00);

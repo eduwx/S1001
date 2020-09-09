@@ -14,8 +14,8 @@ uint16_t CharToBit::convertedChar(char data)
 {
     if (data == 'A')
         return charTable[0];
-    else if (data == 'R')
-        return charTable[1];
+    // else if (data == 'R')
+    //     return charTable[1];
     else
         return 0;
 }
