@@ -6,7 +6,7 @@ class CharToBit
 {
 public:
     CharToBit();
-    void convertedChar(uint16_t a);
+    uint16_t convertedChar(char data);
 
 private:
 };

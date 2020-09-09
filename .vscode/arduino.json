@@ -1,4 +1,6 @@
 {
     "board": "arduino:avr:uno",
-    "port": "/dev/ttyACM0"
+    "port": "/dev/ttyACM0",
+    "sketch": "_main.ino",
+    "output": "../ArduinoOutput"
 }

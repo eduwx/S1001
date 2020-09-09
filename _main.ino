@@ -7,7 +7,6 @@
     -> du.ferro@hotmail.com
 */
 
-
 #include "pt6311.h"
 
 #define VFD_INITIALIZE_MODE 0x30 //13 digits and 15 segments
@@ -30,22 +29,13 @@ PT6311 vfd(7, 8, 9, VFD_INITIALIZE_MODE, VFD_DATA_SETTING, VFD_MEMORY_ADDRESS);
 
 void setup()
 {
+    Serial.begin(115200);
     delay(250);
 }
 
 void loop()
 {
-    for (uint8_t a = 1; a < 12; a++)
-    {
-        vfd.setCursor(a);
-        vfd.print('R');
-        delay(100);
-    }
-
-    for (uint8_t a = 11; a > 0; a--)
-    {
-        vfd.setCursor(a);
-        vfd.print('R');
-        delay(100);
-    }
+    vfd.setCursor(1);
+    vfd.print("EduARdo FeRRo");
+    // delay(1000);
 }

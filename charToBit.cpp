@@ -1,7 +1,7 @@
 #include "charToBit.h"
 #include <Arduino.h>
 
-uint16_t teste[]{
+uint16_t charTable[]{
     0x478C, //A
     0x4B8C, //R
 };
@@ -10,6 +10,12 @@ CharToBit::CharToBit()
 {
 }
 
-void CharToBit::convertedChar(uint16_t a)
+uint16_t CharToBit::convertedChar(char data)
 {
+    if (data == 'A')
+        return charTable[0];
+    else if (data == 'R')
+        return charTable[1];
+    else
+        return 0;
 }

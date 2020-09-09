@@ -57,11 +57,18 @@ void PT6311::setCursor(uint8_t position)
     process(addressDigit[position], false, false);
 }
 
-void PT6311::print(char DATA)
+void PT6311::print(String DATA)
 {
-    process(0xFF, false, false);
-    process(0xFD, false, false);
-    process(0xF1, true, false); //CMD 4
+    uint8_t strLength;
+    strLength = DATA.length();
+    char str[strLength];
+    DATA.toCharArray(str, strLength);
+
+    for (uint8_t x = 0; x < strLength; x++)
+    {
+        charToBit.convertedChar(str[x]);
+    }
+    delay(5000);
 }
 
 void PT6311::process(uint8_t data, bool a, bool c)
