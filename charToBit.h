@@ -7,6 +7,7 @@ class CharToBit
 public:
     CharToBit();
     uint16_t convertedChar(char data);
+    bool show();
 
 private:
 };

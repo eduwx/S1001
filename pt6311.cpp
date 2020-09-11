@@ -30,7 +30,7 @@ PT6311::PT6311(uint8_t VFD_DATA_PIN, uint8_t VFD_CLOCK_PIN, uint8_t VFD_STROBE_P
     process(VFD_DATA_SETTING_, false, true);
     process(VFD_MEMORY_ADDRESS_, false, false);
 
-    // clear();
+    //clear();
 }
 
 void PT6311::clear()
@@ -69,24 +69,32 @@ void PT6311::print(String DATA)
     for (uint8_t x = 0; x < strLength; x++)
     {
         j = ((charToBit.convertedChar(str[x]) >> 8) & 0xFF);
-        process(j, false, false);
+        if (charToBit.show() == true)
+        {
+            process(j, false, false);
+            Serial.println(j);
+        }
 
         j = ((charToBit.convertedChar(str[x]) >> 0) & 0xFF);
-        process(j, false, false);
+        if (charToBit.show() == true)
+        {
+            process(j, false, false);
+            Serial.println(j);
+        }
 
         process(0xF1, true, false);
     }
 
     // process(0xFF, false, false);
-    // process(0xFD, false, false);
-    // process(0xF1, true, false); //CMD 4
+    // process(0xFF, false, false);
+    // process(0xF1, true, false);
 }
 
 void PT6311::process(uint8_t data, bool a, bool c)
 {
-    
-    Serial.print(data, HEX);
-    Serial.println();
+
+    // Serial.print(data, HEX);
+    // Serial.println();
 
     bool bitTmp;
     if (a)

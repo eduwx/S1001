@@ -6,16 +6,24 @@ uint16_t charTable[]{
     0x4B8C, //R
 };
 
+bool t;
+
 CharToBit::CharToBit()
 {
 }
 
+bool CharToBit::show()
+{
+    return t;
+}
+
 uint16_t CharToBit::convertedChar(char data)
 {
+    t = true;
     if (data == 'A')
         return charTable[0];
     // else if (data == 'R')
     //     return charTable[1];
     else
-        return 0;
+        t = false;
 }
