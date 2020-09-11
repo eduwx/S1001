@@ -30,7 +30,7 @@ PT6311::PT6311(uint8_t VFD_DATA_PIN, uint8_t VFD_CLOCK_PIN, uint8_t VFD_STROBE_P
     process(VFD_DATA_SETTING_, false, true);
     process(VFD_MEMORY_ADDRESS_, false, false);
 
-    //clear();
+    clear();
 }
 
 void PT6311::clear()
@@ -52,7 +52,7 @@ void PT6311::clear()
 
 void PT6311::setCursor(uint8_t position)
 {
-    clear();
+    // clear();
     process(0x22, false, true); //CMD 2
     process(addressDigit[position], false, false);
 }
