@@ -82,7 +82,7 @@ void PT6311::print(String DATA)
             Serial.println(j);
         }
 
-        process(0xF1, true, false);
+        process(0x91, true, false);
     }
 
     // process(0xFF, false, false);

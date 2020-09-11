@@ -27,20 +27,6 @@
 // dataPin|clockPin|strobePin|Vfd initialize mode|Data setting|
 PT6311 vfd(7, 8, 9, VFD_INITIALIZE_MODE, VFD_DATA_SETTING, VFD_MEMORY_ADDRESS);
 
-uint8_t l = 198;
-
-char hex[17] = "0123456789ABCDEF";
-
-void ShowHex(byte convertByte)
-{
-    String av;
-    av.concat(String("0x") + av);
-    av.concat(hex[(convertByte >> 4) & 0x0F]);
-    av.concat(hex[convertByte & 0x0F]);
-
-    Serial.println(av);
-}
-
 void setup()
 {
     Serial.begin(115200);
@@ -49,6 +35,7 @@ void setup()
 
 void loop()
 {
+
     vfd.setCursor(1);
     vfd.print("EE");
     delay(200);
@@ -77,6 +64,7 @@ void loop()
     vfd.print("OO");
     delay(200);
 
-
-    delay(20000);
+    delay(2000);
+    vfd.clear();
+    delay(1000);
 }
