@@ -35,36 +35,10 @@ void setup()
 
 void loop()
 {
-
     vfd.setCursor(1);
-    vfd.print("EE");
-    delay(200);
+    vfd.print("EDUARDO EDU");
 
-    vfd.setCursor(2);
-    vfd.print("DD");
-    delay(200);
-
-    vfd.setCursor(3);
-    vfd.print("UU");
-    delay(200);
-
-    vfd.setCursor(4);
-    vfd.print("AA");
-    delay(200);
-
-    vfd.setCursor(5);
-    vfd.print("RR");
-    delay(200);
-
-    vfd.setCursor(6);
-    vfd.print("DD");
-    delay(200);
-
-    vfd.setCursor(7);
-    vfd.print("OO");
-    delay(200);
-
-    delay(2000);
+    delay(1000);
     vfd.clear();
     delay(1000);
 }

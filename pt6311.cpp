@@ -35,9 +35,8 @@ PT6311::PT6311(uint8_t VFD_DATA_PIN, uint8_t VFD_CLOCK_PIN, uint8_t VFD_STROBE_P
 
 void PT6311::clear()
 {
-    // process(0x30, false, true);  //CMD 1
-    process(0x02, false, true);  //CMD 2
-    process(0x03, false, false); //CMD 3
+    process(0x02, false, true);
+    process(0x03, false, false);
     process(0xE1, true, false);
     for (uint8_t i = 0; i < 8; i++)
     {
@@ -47,55 +46,39 @@ void PT6311::clear()
         process(0x00, false, false);
         process(0x00, false, false);
     }
-    // delay(500);
 }
 
 void PT6311::setCursor(uint8_t position)
 {
     // clear();
-    process(0x22, false, true); //CMD 2
+    process(0x22, false, true);
     process(addressDigit[position], false, false);
 }
 
 void PT6311::print(String DATA)
 {
+    uint8_t j;
     uint8_t strLength;
     strLength = DATA.length();
     char str[strLength];
     DATA.toCharArray(str, strLength);
 
-    uint8_t j;
-
     for (uint8_t x = 0; x < strLength; x++)
     {
+        setCursor(x + 1);
         j = ((charToBit.convertedChar(str[x]) >> 8) & 0xFF);
         if (charToBit.show() == true)
-        {
             process(j, false, false);
-            Serial.println(j);
-        }
 
         j = ((charToBit.convertedChar(str[x]) >> 0) & 0xFF);
         if (charToBit.show() == true)
-        {
             process(j, false, false);
-            Serial.println(j);
-        }
-
-        process(0x91, true, false);
+        process(0xF1, true, false);
     }
-
-    // process(0xFF, false, false);
-    // process(0xFF, false, false);
-    // process(0xF1, true, false);
 }
 
 void PT6311::process(uint8_t data, bool a, bool c)
 {
-
-    // Serial.print(data, HEX);
-    // Serial.println();
-
     bool bitTmp;
     if (a)
         digitalWrite(VFD_STROBE_PIN_, true);

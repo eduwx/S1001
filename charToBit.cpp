@@ -8,6 +8,7 @@ uint16_t charTable[]{
     0xC48C, //O
     0x4B8C, //R
     0xC488, //U
+    0x0000, //SPACE
 };
 
 bool t;
@@ -36,6 +37,8 @@ uint16_t CharToBit::convertedChar(char data)
         return charTable[4];
     else if (data == 'U')
         return charTable[5];
+    else if (data == ' ')
+        return charTable[6];
     else
         t = false;
 }
