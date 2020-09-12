@@ -36,7 +36,7 @@ void setup()
 void loop()
 {
     vfd.setCursor(1);
-    vfd.print("EDUARDO EDU");
+    vfd.print("WXYZ");
 
     delay(1000);
     vfd.clear();

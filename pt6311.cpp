@@ -59,7 +59,7 @@ void PT6311::print(String DATA)
 {
     uint8_t j;
     uint8_t strLength;
-    strLength = DATA.length();
+    strLength = DATA.length() + 1;
     char str[strLength];
     DATA.toCharArray(str, strLength);
 
