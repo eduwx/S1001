@@ -1,3 +1,5 @@
+#include <Arduino.h>
+#line 1 "/media/eduardo/BACKUP/NextCloud/Codigos Arduino/VFD PT6311/S1001/V0.2/_main.ino"
 /*
     AZAMERICA S1001 VFD controller LIB.
 
@@ -27,6 +29,13 @@
 // dataPin|clockPin|strobePin|Vfd initialize mode|Data setting|
 PT6311 vfd(7, 8, 9, VFD_INITIALIZE_MODE, VFD_DATA_SETTING, VFD_MEMORY_ADDRESS);
 
+#line 30 "/media/eduardo/BACKUP/NextCloud/Codigos Arduino/VFD PT6311/S1001/V0.2/_main.ino"
+void setup();
+#line 36 "/media/eduardo/BACKUP/NextCloud/Codigos Arduino/VFD PT6311/S1001/V0.2/_main.ino"
+void loop();
+#line 43 "/media/eduardo/BACKUP/NextCloud/Codigos Arduino/VFD PT6311/S1001/V0.2/_main.ino"
+void tes();
+#line 30 "/media/eduardo/BACKUP/NextCloud/Codigos Arduino/VFD PT6311/S1001/V0.2/_main.ino"
 void setup()
 {
     // Serial.begin(115200);

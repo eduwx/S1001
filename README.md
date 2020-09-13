@@ -12,3 +12,4 @@ azamerica s1001 VFD controller LIB
  * | You are free to copy, modify and share this library, please keep the developer credits.
  * | Developed by Eduardo Ferro.
  * | du.ferro@hotmail.com
+s

@@ -1,0 +1,12 @@
+{
+  "additionalFiles": "..,..,..,..",
+  "builtInLibrariesFolders": "/home/eduardo/Downloads/arduino-1.8.13/libraries",
+  "builtInToolsFolders": "/home/eduardo/Downloads/arduino-1.8.13/tools-builder,/home/eduardo/Downloads/arduino-1.8.13/hardware/tools/avr",
+  "compiler.optimization_flags": "",
+  "customBuildProperties": "build.path=/media/eduardo/BACKUP/NextCloud/Codigos Arduino/VFD PT6311/S1001/ArduinoOutput,build.warn_data_percentage=75,runtime.tools.arduinoOTA.path=/home/eduardo/Downloads/arduino-1.8.13/hardware/tools/avr,runtime.tools.arduinoOTA-1.3.0.path=/home/eduardo/Downloads/arduino-1.8.13/hardware/tools/avr,runtime.tools.avr-gcc.path=/home/eduardo/Downloads/arduino-1.8.13/hardware/tools/avr,runtime.tools.avr-gcc-7.3.0-atmel3.6.1-arduino7.path=/home/eduardo/Downloads/arduino-1.8.13/hardware/tools/avr,runtime.tools.avrdude.path=/home/eduardo/Downloads/arduino-1.8.13/hardware/tools/avr,runtime.tools.avrdude-6.3.0-arduino17.path=/home/eduardo/Downloads/arduino-1.8.13/hardware/tools/avr",
+  "fqbn": "arduino:avr:uno",
+  "hardwareFolders": "/home/eduardo/Downloads/arduino-1.8.13/hardware",
+  "otherLibrariesFolders": "/home/eduardo/Arduino/libraries",
+  "runtime.ide.version": "10813",
+  "sketchLocation": "/media/eduardo/BACKUP/NextCloud/Codigos Arduino/VFD PT6311/S1001/V0.2/_main.ino"
+}

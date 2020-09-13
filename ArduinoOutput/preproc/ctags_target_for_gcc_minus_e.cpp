@@ -1,3 +1,4 @@
+# 1 "/media/eduardo/BACKUP/NextCloud/Codigos Arduino/VFD PT6311/S1001/V0.2/_main.ino"
 /*
     AZAMERICA S1001 VFD controller LIB.
 
@@ -7,11 +8,11 @@
     -> du.ferro@hotmail.com
 */
 
-#include "pt6311.h"
+# 11 "/media/eduardo/BACKUP/NextCloud/Codigos Arduino/VFD PT6311/S1001/V0.2/_main.ino" 2
 
-#define VFD_INITIALIZE_MODE 0x30 //13 digits and 15 segments
 
-#define VFD_DATA_SETTING 0x02 //Write to display     | Auto increment address | Normal Mode
+
+
 // #define VFD_DATA_SETTING 0x82 //Write to LED Port | Auto increment address | Normal Mode
 // #define VFD_DATA_SETTING 0x22 //Read Key data     | Auto increment address | Normal Mode
 // #define VFD_DATA_SETTING 0xC2 //Read SW data      | Auto increment address | Normal Mode
@@ -22,10 +23,10 @@
 // #define VFD_DATA_SETTING 0xE2 //Read SW data      | Fixed address | Normal Mode
 
 // Define the first position memory
-#define VFD_MEMORY_ADDRESS 0x03
+
 
 // dataPin|clockPin|strobePin|Vfd initialize mode|Data setting|
-PT6311 vfd(7, 8, 9, VFD_INITIALIZE_MODE, VFD_DATA_SETTING, VFD_MEMORY_ADDRESS);
+PT6311 vfd(7, 8, 9, 0x30 /*13 digits and 15 segments*/, 0x02 /*Write to display     | Auto increment address | Normal Mode*/, 0x03);
 
 void setup()
 {
