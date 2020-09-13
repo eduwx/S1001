@@ -7,9 +7,9 @@ azamerica s1001 VFD controller lib
 using the display are similar to the Arduino's 16x2 LCD library. Numbers still don't work. Next steps:
      
 - 1. Show numbers, 
-- 2. Scroll words,
-- 3. Read display buttons, 
-- 4. Optimize code.
+-  2. Scroll words,
+-  3. Read display buttons, 
+-  4. Optimize code.
 
 
 
