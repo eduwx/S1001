@@ -55,12 +55,13 @@ void PT6311::setCursor(uint8_t position)
     clear();
     process(0x22, false, true); //CMD 2
     process(addressDigit[position], false, false);
+    print('a');
 }
 
 void PT6311::print(char DATA)
 {
     process(0xFF, false, false);
-    process(0xFD, false, false);
+    process(0xFF, false, false);
     process(0xF1, true, false); //CMD 4
 }
 

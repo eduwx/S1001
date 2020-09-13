@@ -35,17 +35,15 @@ void setup()
 
 void loop()
 {
-    for (uint8_t a = 1; a < 12; a++)
+    for (uint8_t i = 1; i < 12; i++)
     {
-        vfd.setCursor(a);
-        vfd.print('R');
+        vfd.setCursor(i);
         delay(100);
     }
 
-    for (uint8_t a = 11; a > 0; a--)
+    for (uint8_t i = 11; i > 0; i--)
     {
-        vfd.setCursor(a);
-        vfd.print('R');
+        vfd.setCursor(i);
         delay(100);
     }
 }
