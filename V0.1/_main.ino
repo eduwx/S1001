@@ -7,7 +7,6 @@
     -> du.ferro@hotmail.com
 */
 
-
 #include "pt6311.h"
 
 #define VFD_INITIALIZE_MODE 0x30 //13 digits and 15 segments
