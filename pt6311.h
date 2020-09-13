@@ -2,8 +2,6 @@
 #define PT6311_h
 #include <Arduino.h>
 
-
-
 class PT6311
 {
 public:
@@ -11,6 +9,8 @@ public:
     void clear();
     void setCursor(uint8_t POSITION);
     void print(String DATA);
+    void scrollDisplayRight(String DATA);
+    void scrollDisplayLeft(String DATA);
 
 private:
     void process(uint8_t data, bool a, bool b);

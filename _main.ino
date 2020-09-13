@@ -29,14 +29,19 @@ PT6311 vfd(7, 8, 9, VFD_INITIALIZE_MODE, VFD_DATA_SETTING, VFD_MEMORY_ADDRESS);
 
 void setup()
 {
-    Serial.begin(115200);
+    // Serial.begin(115200);
     delay(250);
 }
 
 void loop()
 {
     vfd.setCursor(1);
-    vfd.print("WXYZ");
+    vfd.print("EDUARDO FER");
+    tes();
+}
+
+void tes()
+{
 
     delay(1000);
     vfd.clear();

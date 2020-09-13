@@ -10,7 +10,7 @@ uint16_t charTable[]{
     0x4384, //F
     0xC684, //G
     0x4788, //H
-    0x9424, //I
+    0x9024, //I
     0xC408, //J
     0x4990, //K
     0xC080, //L
@@ -30,7 +30,6 @@ uint16_t charTable[]{
     0xA314, //Z
     0x0000, //SPACE
 };
-
 bool t;
 
 CharToBit::CharToBit()

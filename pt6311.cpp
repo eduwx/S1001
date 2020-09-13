@@ -60,6 +60,30 @@ void PT6311::print(String DATA)
     uint8_t j;
     uint8_t strLength;
     strLength = DATA.length() + 1;
+    if (strLength > 12)
+        strLength = 12;
+    char str[strLength];
+    DATA.toCharArray(str, strLength);
+
+    for (uint8_t x = 0; x < strLength; x++)
+    {
+        setCursor(x + 1);
+        j = ((charToBit.convertedChar(str[x]) >> 8) & 0xFF);
+        if (charToBit.show() == true)
+            process(j, false, false);
+
+        j = ((charToBit.convertedChar(str[x]) >> 0) & 0xFF);
+        if (charToBit.show() == true)
+            process(j, false, false);
+        process(0xF1, true, false);
+    }
+}
+
+void PT6311::scrollDisplayRight(String DATA)
+{
+    uint8_t j;
+    uint8_t strLength;
+    strLength = DATA.length() + 1;
     char str[strLength];
     DATA.toCharArray(str, strLength);
 
